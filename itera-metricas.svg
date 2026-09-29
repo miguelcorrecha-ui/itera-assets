@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C9FF" />
+      <stop offset="100%" stop-color="#92FE9D" />
+    </linearGradient>
+  </defs>
+  <!-- Fondo redondeado con el degradado de marca -->
+  <rect x="28" y="28" width="456" height="456" rx="116" fill="url(#mg)" />
+  <!-- Barras del tablero de métricas -->
+  <rect x="116" y="286" width="62" height="118" rx="20" fill="#0B2239" />
+  <rect x="202" y="228" width="62" height="176" rx="20" fill="#0B2239" />
+  <rect x="288" y="170" width="62" height="234" rx="20" fill="#0B2239" />
+  <!-- Línea de tendencia -->
+  <path d="M124 246 L214 190 L300 132 L392 178" fill="none" stroke="#EAF6FF"
+        stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Punto de cierre -->
+  <circle cx="392" cy="178" r="22" fill="#EAF6FF" />
+</svg>
