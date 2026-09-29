@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Degradado para el cuerpo exterior/fondo del reloj -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C9FF" />
+      <stop offset="100%" stop-color="#92FE9D" />
+    </linearGradient>
+
+    <!-- Degradado para los detalles del marco y manecillas -->
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052D4" />
+      <stop offset="50%" stop-color="#4364F7" />
+      <stop offset="100%" stop-color="#6FB1FC" />
+    </linearGradient>
+
+    <!-- Degradado suave para el bisel exterior -->
+    <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#92FE9D" />
+      <stop offset="100%" stop-color="#00C9FF" />
+    </linearGradient>
+
+    <!-- Sombra paralela para dar profundidad -->
+    <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#003366" flood-opacity="0.25" />
+    </filter>
+    
+    <filter id="inner-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Sombra base -->
+  <g filter="url(#drop-shadow)">
+    <!-- Botón superior del reloj de parada/cronómetro -->
+    <rect x="236" y="28" width="40" height="24" rx="6" fill="url(#bg-gradient)" />
+    <rect x="246" y="48" width="20" height="16" fill="url(#bg-gradient)" />
+
+    <!-- Círculo Exterior (Anillo) -->
+    <circle cx="256" cy="276" r="200" fill="url(#ring-gradient)" />
+    
+    <!-- Fondo del dial interno -->
+    <circle cx="256" cy="276" r="172" fill="#FFFFFF" />
+    
+    <!-- Círculo degradado interior -->
+    <circle cx="256" cy="276" r="156" fill="url(#bg-gradient)" opacity="0.15" />
+  </g>
+
+  <!-- Marcas de las horas -->
+  <!-- 12, 3, 6, 9 (Principales) -->
+  <rect x="248" y="136" width="16" height="28" rx="8" fill="url(#ring-gradient)" />
+  <rect x="388" y="268" width="28" height="16" rx="8" fill="url(#ring-gradient)" />
+  <rect x="248" y="388" width="16" height="28" rx="8" fill="url(#ring-gradient)" />
+  <rect x="96" y="268" width="28" height="16" rx="8" fill="url(#ring-gradient)" />
+
+  <!-- Marcas secundarias (puntos) -->
+  <circle cx="332" cy="156" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+  <circle cx="376" cy="200" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+  <circle cx="376" cy="352" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+  <circle cx="332" cy="396" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+  <circle cx="180" cy="396" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+  <circle cx="136" cy="352" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+  <circle cx="136" cy="200" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+  <circle cx="180" cy="156" r="6" fill="url(#ring-gradient)" opacity="0.7" />
+
+  <!-- Manecillas del reloj -->
+  <g filter="url(#inner-glow)">
+    <!-- Manecilla de las horas (apunta a las 10) -->
+    <rect x="248" y="196" width="16" height="96" rx="8" fill="url(#accent-gradient)" transform="rotate(-60 256 276)" />
+    
+    <!-- Manecilla de los minutos (apunta a las 2) -->
+    <rect x="249" y="166" width="14" height="126" rx="7" fill="url(#accent-gradient)" transform="rotate(50 256 276)" />
+    
+    <!-- Segundero estilizado (verde brillante) -->
+    <line x1="256" y1="316" x2="256" y2="156" stroke="#00E676" stroke-width="4" stroke-linecap="round" transform="rotate(140 256 276)" />
+    <circle cx="256" cy="276" r="4" fill="#00E676" transform="rotate(140 256 276)" />
+  </g>
+
+  <!-- Punto central eje del reloj -->
+  <circle cx="256" cy="276" r="14" fill="#FFFFFF" />
+  <circle cx="256" cy="276" r="10" fill="url(#accent-gradient)" />
+</svg>
